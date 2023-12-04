@@ -1,0 +1,45 @@
+
+body{
+    width: 350px; /* On a indiqué une largeur (obligatoire) */
+    margin: auto; /* On peut donc demander à ce que le bloc soit
+    centré avec auto */
+    /* border: 1px solid black; */
+    text-align: justify;
+    padding: 200px;
+    margin-bottom: 20px;
+    }
+
+    .scroll {
+      overflow: auto;
+      max-height: 300px; /* Taille maximale de défilement */
+    }
+    
+    @media screen and (max-width: 576px) {
+      .scroll {
+        max-height: 200px; /* Modifier la taille de défilement pour les appareils de largeur maximale de 576px */
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      .scroll {
+        max-height: 250px; /* Modifier la taille de défilement pour les appareils de largeur maximale de 768px */
+      }
+    }
+    
+    @media screen and (max-width: 992px) {
+      .scroll {
+        max-height: 350px; /* Modifier la taille de défilement pour les appareils de largeur maximale de 992px */
+      }
+    }
+    
+    @media screen and (max-width: 1200px) {
+      .scroll {
+        max-height: 400px; /* Modifier la taille de défilement pour les appareils de largeur maximale de 1200px */
+      }
+    }
+    
+    @media screen and (max-width: 1440px) {
+      .scroll {
+        max-height: 450px; /* Modifier la taille de défilement pour les appareils de largeur maximale de 1440px */
+      }
+    }

@@ -1,0 +1,472 @@
+/*** UTILITIES*
+*Fonts
+*colors
+*positions
+*common paddings
+*common margins
+**/
+
+/* Font | Google Popins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,600;1,700&display=swap');
+
+.scroll {
+    width: 100%; /* Largeur de la zone de défilement */
+    height: 100%; /* Hauteur de la zone de défilement */
+    overflow: auto; /* Activer le défilement */
+  }
+
+:root {
+    /* colors */
+    --body-color:#E4E9F7;
+    --side-bar-color:#FFF;
+    --primary-color:rgb(68, 137, 217);
+    --primary-color-light:#F6F5FF;
+    --text-color:#707070;
+    --boxshadow:rgba(31, 32, 34, 0.3) 0px 1px 2px 0px ,
+    rgba(48, 49, 50, 0.15) 0px 1px 13px 1px;
+    --critical-color:rgb(243, 91, 91);
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--body-color);
+}
+
+
+.grid{
+    /* grid */
+    display: grid;
+}
+
+.flex {
+    /* flex */
+    display: flex;
+}
+
+.block {
+    /* block */
+    display: block;
+}
+
+/* 
+*content-Position
+*side-bar
+*/
+
+
+
+
+ /* side-bar */
+
+
+.side-bar {
+   
+    position: fixed;
+    background-color: var(--side-bar-color);
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 250px;
+    color: var(--text-color) ;
+    padding: 20px;
+    z-index: 100;
+    transition: all 0.9s ease;
+}
+
+
+
+.side-bar .logo-name {
+    position: relative;
+    gap: 10px;
+    width: 200px;
+    border-radius: 6px;
+     margin-top: -3px;
+     align-items: center;
+     justify-content: center;
+}
+
+.side-bar .logo-name .text {
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    
+}
+
+
+.side-bar .logo {
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: 500;
+    margin-left:-50px ;
+
+}
+
+.side-bar .logo .u,.side-bar .logo .z {
+    color: var(--primary-color);
+    font-weight: 800;
+
+
+}
+
+
+
+.toggleIcon {
+    position: absolute;
+    top: 110px;
+    right: -40px;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: var(--side-bar-color);
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.9s ease;
+    
+}
+
+
+.side-bar li a {
+    text-decoration: none;
+    color: var(--text-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+
+.side-bar li a:hover {
+    background-color: var(--primary-color);
+}
+
+
+.side-bar li a i , .side-bar li a .text {
+    color: var(--text-color);
+    transition: all 0.5s ease;
+ }
+
+.side-bar li a:hover i , .side-bar li  a:hover .text {
+    color: var(--side-bar-color);
+ }
+
+.side-bar li {
+    height: 50px;
+    margin-top: 10px;
+    list-style-type: none;
+    align-items: center;
+}
+
+.side-bar li i{
+    
+    font-size: 20px;
+    min-width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.side-bar .search-box {
+    background-color: var(--primary-color-light);
+
+}
+
+
+.side-bar input {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color-light);
+    outline: none;
+    border: none;
+    border-radius:6px ;
+
+}
+
+.side-bar .menu-bar {
+    height: 100%;
+    flex-direction: column;
+    gap: 45px;
+    justify-content: space-between;
+  
+}
+
+.side-bar.close {
+    width: 100px;
+}
+
+.side-bar.close .toggleIcon.closedIcon{
+    right: 110px;
+}
+
+.side-bar.close .text.hidden-text{
+   opacity: 0;
+}
+
+
+.text {
+    
+    transition: all 0.9s ease;
+}
+
+/* Main */
+
+.main {
+    position: relative;
+    height: 100vh;
+    left: 250px;
+    width: calc(100% - 250px);
+    transition: all 0.9s ease;
+}
+
+.side-bar.close ~ .main {
+    left: 100px;
+    width: calc(100% - 100px);
+
+}
+
+.main .top-bar {
+    justify-content: space-between;
+    background-color: var(--side-bar-color);
+    align-items: center;
+    color: var(--text-color);
+    padding: 10px;
+    position: fixed;
+    left: 250px;
+    width: calc(100% - 250px);
+    transition: all 0.9s ease;
+    top: 0;
+    height: 81px;
+   
+}
+
+.app-content {
+    height: calc(100vh - 81px);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    top: 81px;
+    background-color: var(--side-bar-color);
+    margin: 2px;
+    margin-top: 4px;
+}
+
+.side-bar.close ~ .main .top-bar {
+    left: 100px;
+    width: calc(100% - 100px);
+
+}
+
+
+.app-content .page-content  {
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 8px 25px;
+    top: 90px;
+    position: fixed;
+
+    left: 250px;
+    width: calc(100% - 250px) ;
+   
+    
+    
+}
+
+
+.side-bar.close ~ .main .page-content {
+    left: 100px;
+    width: calc(100% - 100px);
+
+}
+
+.app-content  .product-categories {
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 8px 25px;
+    
+    
+}
+
+.side-bar .menu-bar {
+    margin-top: 30px;
+}
+
+.top-bar .user-info .name-role {
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.top-bar .app-title{
+   
+    color: var(--text-color);
+    
+}
+
+
+.date-time-tile {
+    margin-left:450px ;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.user-info .notifications  {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+
+
+.name-role-notifications {
+    gap: 20px;
+}
+
+.user-info .notifications i  {
+    font-size: x-large;
+    padding: 12px;
+}
+
+.user-info .name-role-picture{
+    padding: 5px;
+    gap: 10px;
+
+}
+.user-info .name-role-picture .picture{
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: -12px;
+    
+    
+   
+}
+
+.user-info .name-role-picture .picture img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+
+
+
+.user-info .name-role .role i {
+
+    font-size: x-large;
+    font-weight: 200;
+
+}
+
+.top-bar .app-title .s {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: larger;
+}
+
+.top-bar .name-role-notifications .notifications-count{
+    position: absolute;
+    color: var(--side-bar-color);
+    font-weight: bolder;
+    left: 26px;
+    top: 10px;
+    background-color: var(--primary-color);
+    height: 20px;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.page-content .page-title{
+    font-weight: 900;
+    background-color: var(--side-bar-color);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 0 10px;
+    
+  
+    
+}
+
+.page-content .page-title .real-title{
+    padding: 8px;
+    margin-left: 30px;
+    color: var(--primary-color);  
+}
+
+.filter-text{
+    text-align: center;
+}
+
+.page-content .page-title .status,
+.page-content .page-title .filtre-addcategory{
+    font-weight:500;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 200px;
+    padding: 3px;
+    
+}
+
+.page-content .page-title .filtre-addcategory{
+    padding-left: 20px;
+    gap: 20px;
+   
+  
+}
+
+.filter .add-category{
+    color: var(--side-bar-color);
+    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+}
+
+.filter .add-category:hover, .categories #add-category-bottom:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+
+
+
+.filter .add-category .add-icon{
+    font-size:25px;
+}
+.filter {
+    gap: 20px;
+}
+.filtre-status {
+    font-weight: 400;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+

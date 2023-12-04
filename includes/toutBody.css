@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+
+.sectionCreationAffichage {
+    width: 82%;
+    margin-left: 18%;
+    margin-right: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sectionCreationAffichage > h1, .sectionAffichage > h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: rgb(30,48,80) ;
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+form {
+    
+    border-color: rgb(30,48,80) ;
+    border-radius: 2%;
+    margin: 10%;
+    margin-top:5%;
+    margin-bottom: 5%;
+    background-color: white;
+    box-shadow:2px 2px 1px aliceblue; 
+}
+
+form > h3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color :rgb(30,48,80)
+}
+
+.champEntree, .photo{
+    width : 100%;
+    padding : 10px ;
+    margin-bottom : 10px ;
+    border : 0px;
+    box-shadow:2px 2px 1px rgb(30,48,80);
+}
+
+.champSelect {
+    width : 107%;
+    padding : 10px ;
+    margin-bottom : 10px ;
+    border : 0px;
+    box-shadow:2px 2px 1px rgb(30,48,80);
+    background-color: white;
+}
+
+.formSelectContrat {
+    margin-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.formChangerContrat {
+    margin-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.labelSelectContrat {
+    margin-left: 10%;
+}
+
+.champSelectContrat {
+    display:block;
+    margin-left: 10%;
+    width : 82%;
+    padding : 10px ;
+    margin-bottom : 10px ;
+    border : 0px;
+    box-shadow:2px 2px 1px rgb(30,48,80);
+    background-color: white;   
+}
+
+.btnSubmit {
+    display: block;
+    margin-right: 7.5%;
+    margin-left: auto;
+    margin-bottom: 10%;
+    padding : 10px ;
+    background: rgb(30,48,80);
+    color : white ;
+    border:0px ;
+    cursor:pointer;
+}
+
+.divInputsI, .divInputsII {
+    width: 35%;   
+}
+
+.divInputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+table {
+    width: 100%;    
+    background-color: rgba(0,0,0,0.5);
+}
+
+thead tr th {
+    border-left: 3px solid;
+    border-color: red;
+    padding:10px;
+}
